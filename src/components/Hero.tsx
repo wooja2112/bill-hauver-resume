@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { metrics, profile } from "@/lib/resume";
 import StatusDot from "./StatusDot";
 
@@ -19,38 +20,51 @@ export default function Hero() {
       />
 
       <div className="container-page relative flex flex-col gap-14 py-24 sm:py-28 md:py-32">
-        <div className="flex flex-col gap-6">
-          <div className="flex items-center gap-2.5">
-            <StatusDot />
-            <p className="eyebrow text-muted-on-dark">
-              {profile.title} &mdash; {profile.tagline}
+        <div className="grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-16">
+          <div className="flex flex-col gap-6">
+            <div className="flex items-center gap-2.5">
+              <StatusDot />
+              <p className="eyebrow text-muted-on-dark">
+                {profile.title} &mdash; {profile.tagline}
+              </p>
+            </div>
+
+            <h1 className="font-display text-[3.1rem] font-black uppercase leading-[0.96] tracking-[-0.01em] sm:text-[4.5rem] md:text-[5.75rem]">
+              {profile.name}
+            </h1>
+
+            <p className="max-w-2xl text-balance text-[1.05rem] leading-relaxed text-muted-on-dark sm:text-lg">
+              {profile.summary}
             </p>
+
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <a
+                href={profile.emailHref}
+                className="rounded-sm bg-signal-bright px-5 py-2.5 font-mono text-[0.78rem] font-medium uppercase tracking-[0.08em] text-ink transition-transform hover:-translate-y-0.5"
+              >
+                {profile.email}
+              </a>
+              <a
+                href="/Bill-Hauver-Resume.docx"
+                className="rounded-sm border border-white/25 px-5 py-2.5 font-mono text-[0.78rem] uppercase tracking-[0.08em] text-paper transition-colors hover:border-signal-bright hover:text-signal-bright"
+              >
+                Download résumé
+              </a>
+              <span className="font-mono text-[0.78rem] text-muted-on-dark">
+                {profile.location} &middot; {profile.phone}
+              </span>
+            </div>
           </div>
 
-          <h1 className="font-display text-[3.1rem] font-black uppercase leading-[0.96] tracking-[-0.01em] sm:text-[4.5rem] md:text-[5.75rem]">
-            {profile.name}
-          </h1>
-
-          <p className="max-w-2xl text-balance text-[1.05rem] leading-relaxed text-muted-on-dark sm:text-lg">
-            {profile.summary}
-          </p>
-
-          <div className="flex flex-wrap items-center gap-4 pt-2">
-            <a
-              href={profile.emailHref}
-              className="rounded-sm bg-signal-bright px-5 py-2.5 font-mono text-[0.78rem] font-medium uppercase tracking-[0.08em] text-ink transition-transform hover:-translate-y-0.5"
-            >
-              {profile.email}
-            </a>
-            <a
-              href="/Bill-Hauver-Resume.docx"
-              className="rounded-sm border border-white/25 px-5 py-2.5 font-mono text-[0.78rem] uppercase tracking-[0.08em] text-paper transition-colors hover:border-signal-bright hover:text-signal-bright"
-            >
-              Download résumé
-            </a>
-            <span className="font-mono text-[0.78rem] text-muted-on-dark">
-              {profile.location} &middot; {profile.phone}
-            </span>
+          <div className="relative order-first mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-sm border border-white/15 bg-ink-2 lg:order-none lg:mx-0 lg:max-w-none">
+            <Image
+              src="/bill-hauver.png"
+              alt="Portrait of Bill Hauver"
+              fill
+              priority
+              sizes="(min-width: 1024px) 380px, 60vw"
+              className="object-cover object-[center_18%]"
+            />
           </div>
         </div>
 
