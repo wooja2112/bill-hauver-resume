@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Libre_Franklin, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import { profile } from "@/lib/resume";
-import { getSiteUrl } from "@/lib/site";
+import { absoluteUrl, getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 const libreFranklin = Libre_Franklin({
@@ -43,11 +43,20 @@ export const metadata: Metadata = {
     firstName: "Bill",
     lastName: "Hauver",
     username: "bhauver",
+    images: [
+      {
+        url: absoluteUrl("/opengraph-image.jpg"),
+        width: 1200,
+        height: 630,
+        alt: "Bill Hauver, senior IT leader",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title,
     description: profile.summary,
+    images: [absoluteUrl("/opengraph-image.jpg")],
   },
 };
 
@@ -67,7 +76,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       postalCode: "33558",
       addressCountry: "US",
     },
-    image: new URL("/bill-hauver.jpg", siteUrl).href,
+    image: absoluteUrl("/bill-hauver.jpg"),
     url: siteUrl.href,
     sameAs: [profile.linkedinHref],
   };

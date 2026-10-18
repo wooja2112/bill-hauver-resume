@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { metrics, profile } from "@/lib/resume";
+import { assetPath } from "@/lib/site";
 import StatusDot from "./StatusDot";
 
 export default function Hero() {
@@ -35,7 +36,7 @@ export default function Hero() {
 
             <p className="flex items-center gap-3">
               <img
-                src="/us-air-force-symbol.svg"
+                src={assetPath("/us-air-force-symbol.svg")}
                 alt="U.S. Air Force"
                 className="h-14 w-14 bg-paper p-1.5"
               />
@@ -54,7 +55,7 @@ export default function Hero() {
                 {profile.email}
               </a>
               <a
-                href="/Bill-Hauver-Resume.docx"
+                href={assetPath("/Bill-Hauver-Resume.docx")}
                 className="rounded-sm border border-white/25 px-5 py-2.5 font-mono text-[0.78rem] uppercase tracking-[0.08em] text-paper transition-colors hover:border-signal-bright hover:text-signal-bright"
               >
                 Download résumé
@@ -80,7 +81,7 @@ export default function Hero() {
 
           <div className="relative order-first mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-sm border border-white/15 bg-ink-2 lg:order-none lg:mx-0 lg:max-w-none">
             <Image
-              src="/bill-hauver.jpg"
+              src={assetPath("/bill-hauver.jpg")}
               alt="Portrait of Bill Hauver"
               fill
               priority

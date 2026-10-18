@@ -1,12 +1,15 @@
 export function getSiteUrl(): URL {
   const configured = process.env.NEXT_PUBLIC_SITE_URL;
   if (configured) return new URL(configured);
-
-  const productionHost = process.env.VERCEL_PROJECT_PRODUCTION_URL;
-  if (productionHost) return new URL(`https://${productionHost}`);
-
-  const previewHost = process.env.VERCEL_URL;
-  if (previewHost) return new URL(`https://${previewHost}`);
-
   return new URL("http://localhost:3000");
+}
+
+export function assetPath(path: string): string {
+  const base = process.env.PAGES_BASE_PATH ?? "";
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  return `${base}${normalized}`;
+}
+
+export function absoluteUrl(path: string): string {
+  return new URL(assetPath(path), getSiteUrl().origin).href;
 }

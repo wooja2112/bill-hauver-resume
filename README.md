@@ -16,8 +16,9 @@ Open [http://localhost:3000](http://localhost:3000).
 ```bash
 npm run lint
 npm run build
-npm run start
 ```
+
+`npm run build` writes a static site to `out`.
 
 ## Edit the résumé
 
@@ -27,11 +28,13 @@ Copy, roles, and recommendations live in `src/lib/resume.ts`. `src/app/page.tsx`
 | --- | --- |
 | `public/bill-hauver.jpg` | Portrait in the hero |
 | `public/Bill-Hauver-Resume.docx` | Résumé download |
-| `src/app/opengraph-image.jpg` | Link-preview image |
-| `src/app/twitter-image.jpg` | Same preview for Twitter cards |
+| `public/opengraph-image.jpg` | Link-preview image |
+| `public/us-air-force-symbol.svg` | Air Force symbol |
 
-## Share URL
+## Publish
 
-Canonical and Open Graph URLs need an absolute origin. Set `NEXT_PUBLIC_SITE_URL` to the production site, for example `https://example.com`.
+Pushes to `master` deploy the static site to GitHub Pages. In the repository, set **Settings → Pages → Build and deployment → Source** to **GitHub Actions**.
 
-On Vercel, `VERCEL_PROJECT_PRODUCTION_URL` is used when that variable is unset. Locally, the origin falls back to `http://localhost:3000`.
+The published site is [https://wooja2112.github.io/bill-hauver-resume/](https://wooja2112.github.io/bill-hauver-resume/).
+
+The workflow sets the site origin from GitHub Pages. A local build uses `http://localhost:3000`.
