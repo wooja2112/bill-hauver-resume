@@ -27,7 +27,8 @@ Copy, roles, and recommendations live in `src/lib/resume.ts`. `src/app/page.tsx`
 | Path | What it is |
 | --- | --- |
 | `public/bill-hauver.jpg` | Portrait in the hero |
-| `public/Bill-Hauver-Resume.docx` | Résumé download |
+| `public/Bill-Hauver-Resume.pdf` | Résumé download |
+| `public/Bill-Hauver-Resume.docx` | Editable source for the PDF |
 | `public/opengraph-image.jpg` | Link-preview image |
 | `public/us-air-force-symbol.svg` | Air Force symbol |
 

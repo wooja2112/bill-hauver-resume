@@ -55,7 +55,8 @@ export default function Hero() {
                 {profile.email}
               </a>
               <a
-                href={assetPath("/Bill-Hauver-Resume.docx")}
+                href={assetPath("/Bill-Hauver-Resume.pdf")}
+                download="Bill-Hauver-Resume.pdf"
                 className="rounded-sm border border-white/25 px-5 py-2.5 font-mono text-[0.78rem] uppercase tracking-[0.08em] text-paper transition-colors hover:border-signal-bright hover:text-signal-bright"
               >
                 Download résumé
