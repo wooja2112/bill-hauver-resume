@@ -2,7 +2,7 @@ export const profile = {
   name: "Bill Hauver",
   title: "Senior IT Leader",
   tagline: "DevOps, Cloud Infrastructure, Artificial Intelligence & Software Architecture",
-  location: "Lutz, FL 33558",
+  location: "Lutz, FL",
   phone: "813-455-1589",
   phoneHref: "tel:+18134551589",
   email: "whauver@gmail.com",
@@ -10,7 +10,7 @@ export const profile = {
   linkedinHref: "https://www.linkedin.com/in/bhauver/",
   veteran: "Proud U.S. veteran",
   summary:
-    "Senior IT leader with 30+ years of experience spanning DevOps, cloud infrastructure, software architecture, and quality assurance, including 10+ years in senior management. Proven record of building and scaling technical teams of up to 45 people (onshore/offshore) and modernizing enterprise systems for Fortune 500 organizations. Skilled at turning around distressed projects, driving Agile/DevOps transformation, and reducing operating costs while improving system reliability and throughput. Actively applies AI-assisted development tools — Claude, Github CoPilot, and Grok — to accelerate business and technical documentation and to build AI agentic workflows that enforce coding best practices.",
+    "Senior IT leader who modernizes enterprise systems and turns around distressed programs. Uses Claude, Github CoPilot, and Grok to speed documentation and to build agentic workflows that enforce coding standards.",
 };
 
 export const metrics = [

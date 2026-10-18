@@ -73,7 +73,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       "@type": "PostalAddress",
       addressLocality: "Lutz",
       addressRegion: "FL",
-      postalCode: "33558",
       addressCountry: "US",
     },
     image: absoluteUrl("/bill-hauver.jpg"),
