@@ -1,4 +1,4 @@
-import { recommendations } from "@/lib/resume";
+import { profile, recommendations } from "@/lib/resume";
 import Reveal from "./Reveal";
 
 export default function Recommendations() {
@@ -14,12 +14,13 @@ export default function Recommendations() {
               </h2>
             </div>
             <a
-              href="https://www.linkedin.com/in/bhauver/"
+              href={profile.linkedinHref}
               target="_blank"
               rel="noopener noreferrer"
               className="font-mono text-xs uppercase tracking-[0.08em] text-muted transition-colors hover:text-signal"
             >
               Verified on LinkedIn &rarr;
+              <span className="sr-only"> (opens in a new tab)</span>
             </a>
           </div>
         </Reveal>

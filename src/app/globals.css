@@ -126,9 +126,9 @@ body {
   }
 }
 
-/* scroll reveal — JS opts an element INTO the hidden starting state via
-   .reveal-armed, so content stays visible by default for no-JS, print,
-   and find-in-page. See Reveal.tsx. */
+/* scroll reveal — a parser script in page.tsx adds .reveal-armed before
+   first paint, and only for blocks below the viewport. Content stays
+   visible with no JS, in print, and for reduced motion. See Reveal.tsx. */
 
 .reveal-armed {
   opacity: 0;

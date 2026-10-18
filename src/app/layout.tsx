@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Libre_Franklin, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { profile } from "@/lib/resume";
+import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 const libreFranklin = Libre_Franklin({
@@ -23,19 +25,67 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
+const siteUrl = getSiteUrl();
+const title = "Bill Hauver — Senior IT Leader, DevOps, Cloud & AI";
+
 export const metadata: Metadata = {
-  title: "Bill Hauver — Senior IT Leader, DevOps, Cloud & AI",
-  description:
-    "Senior IT leader with 30+ years spanning DevOps, cloud infrastructure, software architecture, and QA — now applying AI-assisted development and agentic workflows. Proven record scaling technical teams and modernizing enterprise systems for Fortune 500 organizations.",
+  metadataBase: siteUrl,
+  title,
+  description: profile.summary,
+  alternates: { canonical: "/" },
+  openGraph: {
+    title,
+    description: profile.summary,
+    url: "/",
+    siteName: profile.name,
+    locale: "en_US",
+    type: "profile",
+    firstName: "Bill",
+    lastName: "Hauver",
+    username: "bhauver",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description: profile.summary,
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: profile.name,
+    jobTitle: profile.title,
+    description: profile.summary,
+    email: profile.email,
+    telephone: profile.phoneHref.replace(/^tel:/, ""),
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Lutz",
+      addressRegion: "FL",
+      postalCode: "33558",
+      addressCountry: "US",
+    },
+    image: new URL("/bill-hauver.jpg", siteUrl).href,
+    url: siteUrl.href,
+    sameAs: [profile.linkedinHref],
+  };
+
   return (
     <html
       lang="en"
       className={`${libreFranklin.variable} ${plexSans.variable} ${plexMono.variable}`}
     >
-      <body className="min-h-screen antialiased">{children}</body>
+      <body className="min-h-screen antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

@@ -12,13 +12,16 @@ export default function Experience() {
           </h2>
         </Reveal>
 
-        <div className="mt-14 border-l border-paper-line pl-9 sm:pl-11">
+        <div className="mt-14 border-l border-paper-line">
           {experience.map((entry, i) => (
-            <Reveal key={entry.company} delay={i * 60}>
-              <div className="relative pb-16 last:pb-0">
+            <Reveal
+              key={entry.company}
+              delay={i * 60}
+              className="relative pb-16 pl-9 last:pb-0 sm:pl-11"
+            >
+              <div>
                 <span
-                  className="absolute top-1.5 h-2.5 w-2.5 rounded-full bg-signal-bright ring-4 ring-paper"
-                  style={{ left: "-2.44rem" }}
+                  className="absolute top-1.5 left-0 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-signal-bright ring-4 ring-paper"
                   aria-hidden="true"
                 />
 
@@ -51,7 +54,7 @@ export default function Experience() {
                     {entry.subRoles.map((sub) => (
                       <div key={sub.role}>
                         <div className="flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
-                          <p className="font-semibold text-ink/90">{sub.role}</p>
+                          <h4 className="font-semibold text-ink/90">{sub.role}</h4>
                           <p className="font-mono text-xs uppercase tracking-[0.06em] text-muted">
                             {sub.period}
                           </p>

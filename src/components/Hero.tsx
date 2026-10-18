@@ -33,6 +33,15 @@ export default function Hero() {
               {profile.name}
             </h1>
 
+            <p className="flex items-center gap-3">
+              <img
+                src="/us-air-force-symbol.svg"
+                alt="U.S. Air Force"
+                className="h-14 w-14 bg-paper p-1.5"
+              />
+              <span className="eyebrow text-paper">{profile.veteran}</span>
+            </p>
+
             <p className="max-w-2xl text-balance text-[1.05rem] leading-relaxed text-muted-on-dark sm:text-lg">
               {profile.summary}
             </p>
@@ -50,15 +59,28 @@ export default function Hero() {
               >
                 Download résumé
               </a>
+              <a
+                href={profile.linkedinHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-sm border border-white/25 px-5 py-2.5 font-mono text-[0.78rem] uppercase tracking-[0.08em] text-paper transition-colors hover:border-signal-bright hover:text-signal-bright"
+              >
+                LinkedIn
+                <span className="sr-only"> (opens in a new tab)</span>
+              </a>
               <span className="font-mono text-[0.78rem] text-muted-on-dark">
-                {profile.location} &middot; {profile.phone}
+                {profile.location}
+                <span aria-hidden="true"> &middot; </span>
+                <a href={profile.phoneHref} className="transition-colors hover:text-paper">
+                  {profile.phone}
+                </a>
               </span>
             </div>
           </div>
 
           <div className="relative order-first mx-auto aspect-[4/5] w-full max-w-xs overflow-hidden rounded-sm border border-white/15 bg-ink-2 lg:order-none lg:mx-0 lg:max-w-none">
             <Image
-              src="/bill-hauver.png"
+              src="/bill-hauver.jpg"
               alt="Portrait of Bill Hauver"
               fill
               priority

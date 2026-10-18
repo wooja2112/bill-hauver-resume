@@ -7,6 +7,8 @@ export const profile = {
   phoneHref: "tel:+18134551589",
   email: "whauver@gmail.com",
   emailHref: "mailto:whauver@gmail.com",
+  linkedinHref: "https://www.linkedin.com/in/bhauver/",
+  veteran: "Proud U.S. veteran",
   summary:
     "Senior IT leader with 30+ years of experience spanning DevOps, cloud infrastructure, software architecture, and quality assurance, including 10+ years in senior management. Proven record of building and scaling technical teams of up to 45 people (onshore/offshore) and modernizing enterprise systems for Fortune 500 organizations. Skilled at turning around distressed projects, driving Agile/DevOps transformation, and reducing operating costs while improving system reliability and throughput. Actively applies AI-assisted development tools — Claude Code, Claude Desktop, and Microsoft Copilot — to accelerate business and technical documentation and to build AI agentic workflows that enforce coding best practices.",
 };

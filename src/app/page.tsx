@@ -20,6 +20,18 @@ export default function Home() {
         <Recommendations />
       </main>
       <Footer />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `(function(){
+            if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+            var nodes = document.querySelectorAll("[data-reveal]");
+            for (var i = 0; i < nodes.length; i++) {
+              var rect = nodes[i].getBoundingClientRect();
+              if (rect.top >= window.innerHeight * 0.9) nodes[i].classList.add("reveal-armed");
+            }
+          })();`,
+        }}
+      />
     </>
   );
 }

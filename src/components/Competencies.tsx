@@ -24,7 +24,7 @@ export default function Competencies() {
             {competencies.map((item) => (
               <div
                 key={item}
-                className="flex items-center gap-3 bg-paper-2 px-5 py-4 transition-colors hover:bg-paper"
+                className="flex items-center gap-3 bg-paper-2 px-5 py-4"
               >
                 <span className="font-mono text-signal select-none" aria-hidden="true">
                   &rsaquo;

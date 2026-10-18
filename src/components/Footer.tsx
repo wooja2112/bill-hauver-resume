@@ -28,6 +28,15 @@ export default function Footer() {
             >
               {profile.phone}
             </a>
+            <a
+              href={profile.linkedinHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-sm uppercase tracking-[0.08em] text-muted-on-dark transition-colors hover:text-paper"
+            >
+              LinkedIn
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
           </div>
         </div>
 
