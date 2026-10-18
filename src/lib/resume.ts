@@ -10,7 +10,7 @@ export const profile = {
   linkedinHref: "https://www.linkedin.com/in/bhauver/",
   veteran: "Proud U.S. veteran",
   summary:
-    "Senior IT leader with 30+ years of experience spanning DevOps, cloud infrastructure, software architecture, and quality assurance, including 10+ years in senior management. Proven record of building and scaling technical teams of up to 45 people (onshore/offshore) and modernizing enterprise systems for Fortune 500 organizations. Skilled at turning around distressed projects, driving Agile/DevOps transformation, and reducing operating costs while improving system reliability and throughput. Actively applies AI-assisted development tools — Claude Code, Claude Desktop, and Microsoft Copilot — to accelerate business and technical documentation and to build AI agentic workflows that enforce coding best practices.",
+    "Senior IT leader with 30+ years of experience spanning DevOps, cloud infrastructure, software architecture, and quality assurance, including 10+ years in senior management. Proven record of building and scaling technical teams of up to 45 people (onshore/offshore) and modernizing enterprise systems for Fortune 500 organizations. Skilled at turning around distressed projects, driving Agile/DevOps transformation, and reducing operating costs while improving system reliability and throughput. Actively applies AI-assisted development tools — Claude, Github CoPilot, and Grok — to accelerate business and technical documentation and to build AI agentic workflows that enforce coding best practices.",
 };
 
 export const metrics = [
@@ -24,7 +24,7 @@ export const highlights = [
   "Led senior management roles (VP, Director, Sr. Manager) directing distributed technical teams of up to 45 people across the U.S. and offshore delivery centers.",
   "Deep expertise in Azure cloud infrastructure, Infrastructure-as-Code (ARM templates), CI/CD pipelines, and enterprise DevOps transformation for Fortune 500 clients.",
   "Delivered measurable business impact: $1M+ in annual cost savings, a 50% reduction in vendor contract cycle time, and infrastructure scaled to 4M+ transactions/day.",
-  "Early adopter of AI-assisted development platforms (Claude Code, Claude Desktop, Microsoft Copilot), building agentic AI workflows that enforce coding best practices and accelerate documentation.",
+  "Early adopter of AI-assisted development platforms (Claude, Github CoPilot, and Grok), building agentic AI workflows that enforce coding best practices and accelerate documentation.",
   "Extensive leadership training in coaching, mentoring, team building, change management, and diversity and ethics.",
 ];
 
@@ -41,7 +41,7 @@ export const competencies = [
   "Change & Release Management",
   "Disaster Recovery Planning",
   "Team Leadership & Mentoring",
-  "AI-Assisted Development (Claude Code, Copilot)",
+  "AI-Assisted Development (Claude, Github CoPilot, Grok)",
   "AI Agentic Workflow Design",
   "AI-Enhanced Technical & Business Writing",
 ];
